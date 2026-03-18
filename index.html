@@ -22,10 +22,6 @@ title: Home
           {% endif %}
           <div class="post-card-body">
             <h3 class="post-card-title">{{ post.title }}</h3>
-            <p class="post-card-date">{{ post.date | date: "%Y.%m.%d" }}</p>
-            {% if post.description %}
-            <p class="post-card-desc">{{ post.description }}</p>
-            {% endif %}
           </div>
         </a>
         {% endif %}
