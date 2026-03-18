@@ -3,18 +3,41 @@ layout: default
 title: Home
 ---
 <div class="home">
+  {% assign categories = site.posts | map: "categories" | join: "," | split: "," | uniq %}
+  {% for category in categories %}
+  <div class="home-section">
+    <h2>{{ category }}</h2>
+    <div class="post-card-list">
+      {% for post in site.posts %}
+        {% if post.categories contains category %}
+        <a href="{{ post.url | relative_url }}" class="post-card">
+          {% if post.thumbnail %}
+          <div class="post-card-img">
+            <img src="{{ post.thumbnail | relative_url }}" alt="{{ post.title }}">
+          </div>
+          {% else %}
+          <div class="post-card-img post-card-img--placeholder">
+            <span>{{ post.title | truncate: 1, "" }}</span>
+          </div>
+          {% endif %}
+          <div class="post-card-body">
+            <h3 class="post-card-title">{{ post.title }}</h3>
+            <p class="post-card-date">{{ post.date | date: "%Y.%m.%d" }}</p>
+            {% if post.description %}
+            <p class="post-card-desc">{{ post.description }}</p>
+            {% endif %}
+          </div>
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+
+  {% if site.posts.size == 0 %}
   <div class="home-section">
     <h2>Recent Posts</h2>
-    <ul class="post-list">
-      {% for post in site.posts %}
-      <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span class="post-date">{{ post.date | date: "%Y.%m.%d" }}</span>
-      </li>
-      {% endfor %}
-    </ul>
-    {% if site.posts.size == 0 %}
     <p style="color: #999;">아직 작성된 글이 없습니다.</p>
-    {% endif %}
   </div>
+  {% endif %}
 </div>

@@ -3,6 +3,7 @@ layout: post
 title: "블로그를 시작합니다"
 date: 2026-03-18
 categories: [일상]
+description: "Android 개발 블로그를 시작합니다. Kotlin, Jetpack Compose, Clean Architecture 등을 다룹니다."
 ---
 
 안녕하세요! **jaehoon's blog**의 첫 번째 포스트입니다.
