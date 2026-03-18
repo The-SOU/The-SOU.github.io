@@ -1,0 +1,14 @@
+title: "jaehoon's blog"
+description: "Android & Kotlin 개발 블로그"
+url: "https://The-SOU.github.io"
+baseurl: ""
+
+markdown: kramdown
+highlighter: rouge
+permalink: /posts/:title/
+
+# Build settings
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

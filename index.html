@@ -1,0 +1,20 @@
+---
+layout: default
+title: Home
+---
+<div class="home">
+  <div class="home-section">
+    <h2>Recent Posts</h2>
+    <ul class="post-list">
+      {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span class="post-date">{{ post.date | date: "%Y.%m.%d" }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% if site.posts.size == 0 %}
+    <p style="color: #999;">아직 작성된 글이 없습니다.</p>
+    {% endif %}
+  </div>
+</div>
