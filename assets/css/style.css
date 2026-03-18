@@ -10,7 +10,11 @@ body {
   font-weight: 400;
   line-height: 1.8;
   color: #333;
-  background: #fff;
+  background: url('../images/wright_brothers.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 a {
@@ -26,6 +30,7 @@ a:hover {
 .site-header {
   border-bottom: 1px solid #eee;
   padding: 20px 0;
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .header-inner {
@@ -66,6 +71,8 @@ a:hover {
   max-width: 800px;
   margin: 0 auto;
   padding: 40px 20px;
+  background: rgba(245, 245, 245, 0.95);
+  min-height: 100vh;
 }
 
 /* === Home Page === */
@@ -128,10 +135,13 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #fff;
-  font-size: 2.5rem;
-  font-weight: 700;
+  background: #f0e6d3;
+  color: #7a6b5a;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 20px;
+  text-align: center;
+  line-height: 1.4;
 }
 
 .post-card-body {
@@ -260,6 +270,23 @@ a:hover {
 }
 
 /* === About / Contact Pages === */
+.profile-section {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 16px;
+  overflow: hidden;
+}
+
 .page-title {
   font-size: 1.8rem;
   font-weight: 700;
@@ -267,11 +294,16 @@ a:hover {
   color: #222;
 }
 
+.content p + p {
+  margin-top: 24px;
+}
+
 /* === Footer === */
 .site-footer {
   border-top: 1px solid #eee;
   padding: 24px 0;
-  margin-top: 60px;
+  margin-top: 0;
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .footer-inner {
