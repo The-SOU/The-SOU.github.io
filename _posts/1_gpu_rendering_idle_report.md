@@ -1,4 +1,10 @@
-# GPU 렌더링 성능 개선 - Idle 상태의 화면에서...
+---
+layout: post
+title: "GPU 렌더링 성능 개선 - Idle 상태의 화면에서..."
+date: 2026-03-24
+categories: [Android]
+description: ""
+---
 
 ## 개요
 
